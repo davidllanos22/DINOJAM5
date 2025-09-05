@@ -1,0 +1,29 @@
+return {
+    name = "Player",
+    type = "Body2D",
+    script_path = "scripts/player.lua",
+    children = {
+        {
+            name = "Sprite",
+            type = "Sprite",
+            texture = "assets/textures/player.png",
+        },
+        {
+            name = "Shape",
+            type = "RectangleShape",
+            visible = true,
+            size = {
+                x = 350,
+                y = 100
+            },
+            transform = {
+                position = {
+                    x = 47,
+                    y = 200
+                }
+            },
+            layer = 1 << 0,
+            mask = 1 << 1
+        }
+    }
+}

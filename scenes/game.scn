@@ -1,0 +1,72 @@
+return {
+    name = "Root",
+    type = "GameObject2D",
+    children = {
+        {
+            name = "Text",
+            type = "Text",
+            text = "DINOJAM5",
+            font_size = 30,
+            transform = {
+                position = {
+                    x = 5,
+                    y = 5
+                }
+            }
+        },
+        {
+            name = "Player",
+            type = "Scene",
+            scene_path = "scenes/player.scn",
+            transform = {
+                position = {
+                    x = 5,
+                    y = 5
+                }
+            }
+        },
+        {
+            name = "Floor",
+            type = "Body2D",
+            static = true,
+            transform = {
+                position = {
+                    y = 480 * 2 - 100
+                }
+            },
+            children = {
+                {
+                    name = "Shape",
+                    type = "RectangleShape",
+                    visible = true,
+                    size = {
+                        x = 640 * 2,
+                        y = 100
+                    },
+                    layer = 1 << 1,
+                    mask = 1 << 0
+                }
+            }
+        },
+        {
+            name = "Water",
+            type = "Sprite",
+            texture = "assets/textures/water.jpg",
+            color = { 255, 255, 255, 150 },
+            transform = {
+                position = {
+                    x = 23,
+                    y = 200,
+                },
+                angle = -90,
+            },
+            h_frames = 10,
+            v_frames = 1
+        },
+        {
+            name = "Wave Shader",
+            type = "ScreenShader",
+            shader_path = "assets/shaders/wave-330.fs",
+        }
+    }
+}
