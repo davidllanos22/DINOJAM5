@@ -7,23 +7,26 @@ return {
             name = "Sprite",
             type = "Sprite",
             texture = "assets/textures/player.png",
+            transform = {
+                scale = 0.5
+            }
         },
         {
             name = "Shape",
             type = "RectangleShape",
             visible = true,
             size = {
-                x = 350,
-                y = 100
+                x = 175,
+                y = 50
             },
             transform = {
                 position = {
-                    x = 47,
-                    y = 200
+                    x = 23.5,
+                    y = 100
                 }
             },
             layer = 1 << 0,
             mask = 1 << 1
-        }
+        },
     }
 }

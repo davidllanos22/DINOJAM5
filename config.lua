@@ -8,5 +8,5 @@ return {
     vsync = true,
     fps = 60,
     main_file = "scenes/game.scn",
-    clear_color = { 22, 23, 26, 255 }
+    clear_color = { 48, 147, 198, 255 }
 }
