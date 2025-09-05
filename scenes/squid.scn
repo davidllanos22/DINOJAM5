@@ -14,7 +14,7 @@ return {
         {
             name = "Shape",
             type = "RectangleShape",
-            visible = true,
+            visible = SHOW_SHAPES,
             size = {
                 x = 35,
                 y = 35

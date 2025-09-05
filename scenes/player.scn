@@ -10,7 +10,7 @@ return {
                 {
                     name = "Shape",
                     type = "RectangleShape",
-                    visible = true,
+                    visible = SHOW_SHAPES,
                     size = {
                         x = 50,
                         y = 50
@@ -37,7 +37,7 @@ return {
         {
             name = "Shape",
             type = "RectangleShape",
-            visible = true,
+            visible = SHOW_SHAPES,
             size = {
                 x = 175,
                 y = 50
@@ -54,13 +54,13 @@ return {
         {
             name = "Breathe Timer",
             type = "Timer",
-            duration = 5000,
+            duration = 10000,
             auto_start = true
         },
         {
             name = "Hunger Timer",
             type = "Timer",
-            duration = 10000,
+            duration = 20000,
             auto_start = true
         },
     }

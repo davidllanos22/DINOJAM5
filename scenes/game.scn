@@ -37,7 +37,6 @@ return {
                         },
                     },
                 },
-
                 {
                     name = "Sea Weed",
                     type = "Sprite",
@@ -101,7 +100,7 @@ return {
                 {
                     name = "Shape",
                     type = "RectangleShape",
-                    visible = true,
+                    visible = SHOW_SHAPES,
                     size = {
                         x = 640 * 10,
                         y = 100
@@ -112,10 +111,33 @@ return {
             }
         },
         {
+            name = "Left Wall",
+            type = "Body2D",
+            static = true,
+            transform = {
+                position = {
+                    x = -100
+                }
+            },
+            children = {
+                {
+                    name = "Shape",
+                    type = "RectangleShape",
+                    visible = SHOW_SHAPES,
+                    size = {
+                        x = 100,
+                        y = 1000
+                    },
+                    layer = 1 << 1,
+                    mask = 1 << 0
+                }
+            }
+        },
+        {
             name = "Water",
             type = "Sprite",
             texture = "assets/textures/water.jpg",
-            color = { 255, 255, 255, 150 },
+            color = { 255, 255, 255, 200 },
             transform = {
                 position = {
                     x = 23,
