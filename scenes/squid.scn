@@ -1,0 +1,32 @@
+return {
+    name = "Squid",
+    type = "Area2D",
+    script_path = "scripts/fish_food.lua",
+    children = {
+        {
+            name = "Sprite",
+            type = "Sprite",
+            texture = "assets/textures/squid_1.png",
+            transform = {
+                scale = 0.1
+            }
+        },
+        {
+            name = "Shape",
+            type = "RectangleShape",
+            visible = true,
+            size = {
+                x = 35,
+                y = 35
+            },
+            transform = {
+                position = {
+                    x = 6,
+                    y = 6
+                }
+            },
+            layer = 1 << 3,
+            mask = 1 << 2
+        },
+    }
+}

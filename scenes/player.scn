@@ -4,6 +4,29 @@ return {
     script_path = "scripts/player.lua",
     children = {
         {
+            name = "Eat Area",
+            type = "Area2D",
+            children = {
+                {
+                    name = "Shape",
+                    type = "RectangleShape",
+                    visible = true,
+                    size = {
+                        x = 50,
+                        y = 50
+                    },
+                    transform = {
+                        position = {
+                            x = 0,
+                            y = 0
+                        }
+                    },
+                    layer = 1 << 2,
+                    mask = 1 << 3
+                },
+            },
+        },
+        {
             name = "Sprite",
             type = "Sprite",
             texture = "assets/textures/player.png",
@@ -32,6 +55,12 @@ return {
             name = "Breathe Timer",
             type = "Timer",
             duration = 5000,
+            auto_start = true
+        },
+        {
+            name = "Hunger Timer",
+            type = "Timer",
+            duration = 10000,
             auto_start = true
         },
     }

@@ -1,4 +1,5 @@
 local breathe_timer
+local hunger_timer
 
 local gravity = 1.5
 local speed = 5
@@ -7,20 +8,30 @@ local accel_x = 0
 local accel_y = 0
 local accel_max = 300
 
+local eat_area
+
 local last_position = { x = 0, y = 0}
 
 function init(self)
+    eat_area = self:get_child("Eat Area")
     breathe_timer = self:get_child("Breathe Timer")
+    hunger_timer = self:get_child("Hunger Timer")
 
-    breathe_timer:connect("finish", function()
-        Signal.emit("player_suffocated")
+    eat_area:connect("collision", function(other)
+        if c_is_key_pressed("space") then
+            hunger_timer:start()
+            other:queue_destroy()
+        end
     end)
+
+    -- breathe_timer:connect("finish", function()
+    --     Signal.emit("player_suffocated")
+    -- end)
 end
 
 function update(self, dt)
     local transform = self:get_local_transform()
     local breathe_percentage = breathe_timer:get_percentage_completed()
-   print(breathe_percentage)
 
     if c_is_key_down("up") then
         accel_y = accel_y - speed
@@ -62,15 +73,14 @@ function update(self, dt)
     transform.position.x = transform.position.x + accel_x * dt
     transform.position.y = transform.position.y + accel_y * dt
 
-
-    --transform.position.y = transform.position.y + gravity * dt
+    --transform.position.y= transform.position.y + gravity * dt
     last_position = transform.position
 
-    if (transform.position.y < 0) then
-        print("breathing!!")
+    local is_out_of_water = transform.position.y < 0
+
+    if (is_out_of_water) then
+        -- TODO: stop player from moving above water
         breathe_timer:start()
-    else
-        print("not breathing :(")
     end
 
     self:set_transform(transform)
