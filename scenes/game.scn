@@ -1,20 +1,8 @@
 return {
     name = "Root",
     type = "GameObject2D",
-    children = {
-        {
-            name = "Text",
-            type = "Text",
-            text = "DINOJAM5",
-            font_size = 30,
-            transform = {
-                position = {
-                    x = 5,
-                    y = 5
-                }
-            }
-        },
-        
+    script_path = "scripts/game.lua",
+    children = {    
         {
             name = "Backgrounds",
             type = "GameObject2D",
@@ -120,7 +108,7 @@ return {
             transform = {
                 position = {
                     x = 23,
-                    y = 200,
+                    y = 100,
                 },
                 angle = -90,
             },
@@ -138,6 +126,18 @@ return {
                     x = 0,
                     y = 0
                 },
+            }
+        },
+        {
+            name = "Breathe Text",
+            type = "Text",
+            text = "Breathe: 0",
+            font_size = 30,
+            transform = {
+                position = {
+                    x = 5,
+                    y = 5
+                }
             }
         },
         {

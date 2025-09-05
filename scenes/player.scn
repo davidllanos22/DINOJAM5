@@ -28,5 +28,11 @@ return {
             layer = 1 << 0,
             mask = 1 << 1
         },
+        {
+            name = "Breathe Timer",
+            type = "Timer",
+            duration = 5000,
+            auto_start = true
+        },
     }
 }
