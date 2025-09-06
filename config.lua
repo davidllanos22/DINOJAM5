@@ -1,3 +1,5 @@
+require("scripts.globals")
+
 return {
     width = 640,
     height = 480,
@@ -8,5 +10,5 @@ return {
     vsync = true,
     fps = 60,
     main_file = "scenes/game.scn",
-    clear_color = { 48, 147, 198, 255 }
+    clear_color = COLORS.BG_CLEAR
 }

@@ -1,0 +1,29 @@
+return {
+    name = "Fish Background",
+    type = "GameObject2D",
+    script_path = "scripts/fish_background.lua",
+    children = {
+        {
+            name = "Sprite",
+            type = "Sprite",
+            texture = "assets/textures/fish_background.png",
+            color = COLORS.BG_MEDIUM,
+            transform = {
+                scale = 0.4
+            }
+        },
+        {
+            name = "Sprite",
+            type = "Sprite",
+            texture = "assets/textures/fish_background.png",
+            color = COLORS.BG_MEDIUM,
+            transform = {
+                position = {
+                    x = 20,
+                    y = 40
+                },
+                scale = 0.4
+            }
+        }
+    }
+}

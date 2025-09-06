@@ -17,7 +17,7 @@ return {
                     name = "Sea Weed",
                     type = "Sprite",
                     texture = "assets/textures/sea_weed_2.png",
-                    color = { 28, 91, 152, 255 },
+                    color = COLORS.BG_MEDIUM,
                     transform = {
                         position = {
                             x = 100,
@@ -29,7 +29,7 @@ return {
                     name = "Medium",
                     type = "Sprite",
                     texture = "assets/textures/bg_white.png",
-                    color = { 28, 91, 152, 255},
+                    color = COLORS.BG_MEDIUM,
                     transform = {
                         position = {
                             x = 100,
@@ -41,7 +41,7 @@ return {
                     name = "Sea Weed",
                     type = "Sprite",
                     texture = "assets/textures/sea_weed_1.png",
-                    color = { 25, 66, 107, 255},
+                    color = COLORS.BG_DARK,
                     transform = {
                         position = {
                             x = 10,
@@ -49,12 +49,11 @@ return {
                         },
                     },
                 },
-                
                 {
                     name = "Dark",
                     type = "Sprite",
                     texture = "assets/textures/bg_white.png",
-                    color = { 25, 66, 107, 255},
+                    color = COLORS.BG_DARK,
                     transform = {
                         position = {
                             x = 0,
@@ -62,7 +61,46 @@ return {
                         },
                     },
                 },
+                {
+                    name = "Floor",
+                    type = "Sprite",
+                    texture = "assets/textures/bg_white.png",
+                    color = COLORS.BG_FLOOR,
+                    origin = {
+                        x = 1,
+                        y = 0
+                    },
+                    transform = {
+                        angle = 180,
+                        position = {
+                            x = 0,
+                            y = 470,
+                        },
+                    },
+                },
                 
+            }
+        },
+        {
+            name = "Fish Background",
+            type = "Scene",
+            scene_path = "scenes/fish_background.scn",
+            transform = {
+                position = {
+                    x = 200,
+                    y = 500
+                }
+            }
+        },
+        {
+            name = "Fish Background 2",
+            type = "Scene",
+            scene_path = "scenes/fish_background.scn",
+            transform = {
+                position = {
+                    x = 230,
+                    y = 480
+                }
             }
         },
         {
@@ -76,7 +114,7 @@ return {
                 }
             }
         },
-         {
+        {
             name = "Squid",
             type = "Scene",
             scene_path = "scenes/squid.scn",
@@ -132,6 +170,42 @@ return {
                     mask = 1 << 0
                 }
             }
+        },
+        {
+            name = "Light",
+            type = "Sprite",
+            texture = "assets/textures/bg_light.png",
+            color = { 255, 255, 255, 60},
+            blend_mode = 1,
+            origin = {
+                x = 0,
+                y = 0
+            },
+            transform = {
+                angle = 0,
+                position = {
+                    x = 0,
+                    y = 0,
+                },
+            },
+        },
+        {
+            name = "Light2",
+            type = "Sprite",
+            texture = "assets/textures/bg_light.png",
+            color = { 255, 255, 255, 20},
+            blend_mode = 1,
+            origin = {
+                x = 0,
+                y = 0
+            },
+            transform = {
+                angle = 0,
+                position = {
+                    x = 700,
+                    y = 0,
+                },
+            },
         },
         {
             name = "Water",
