@@ -8,6 +8,10 @@ return {
             type = "Sprite",
             texture = "assets/textures/fish_background.png",
             color = COLORS.BG_MEDIUM,
+            origin = {
+                x = 0.5,
+                y = 0.5
+            },
             transform = {
                 scale = 0.4
             }
@@ -17,10 +21,14 @@ return {
             type = "Sprite",
             texture = "assets/textures/fish_background.png",
             color = COLORS.BG_MEDIUM,
+            origin = {
+                x = 0.5,
+                y = 0.5
+            },
             transform = {
                 position = {
                     x = 20,
-                    y = 40
+                    y = -100
                 },
                 scale = 0.4
             }

@@ -4,7 +4,7 @@ return {
     script_path = "scripts/game.lua",
     children = {    
         {
-            name = "Backgrounds",
+            name = "Background",
             type = "GameObject2D",
             transform = {
                 position = {
@@ -78,31 +78,31 @@ return {
                         },
                     },
                 },
-                
+                {
+                    name = "Fish Background",
+                    type = "Scene",
+                    scene_path = "scenes/fish_background.scn",
+                    transform = {
+                        position = {
+                            x = 200,
+                            y = -180
+                        }
+                    }
+                },
+                -- {
+                --     name = "Fish Background 2",
+                --     type = "Scene",
+                --     scene_path = "scenes/fish_background.scn",
+                --     transform = {
+                --         position = {
+                --             x = 230,
+                --             y = -200
+                --         }
+                --     }
+                -- },
             }
         },
-        {
-            name = "Fish Background",
-            type = "Scene",
-            scene_path = "scenes/fish_background.scn",
-            transform = {
-                position = {
-                    x = 200,
-                    y = 500
-                }
-            }
-        },
-        {
-            name = "Fish Background 2",
-            type = "Scene",
-            scene_path = "scenes/fish_background.scn",
-            transform = {
-                position = {
-                    x = 230,
-                    y = 480
-                }
-            }
-        },
+        
         {
             name = "Player",
             type = "Scene",
@@ -224,7 +224,7 @@ return {
         },
         {
             name = "Camera",
-            type = "Camera",
+            type = "Camera2D",
             target_name = "Player",
             script_path = "scripts/camera.lua",
             zoom = 1,
@@ -238,7 +238,7 @@ return {
         {
             name = "Breathe Text",
             type = "Text",
-            text = "Breathe: 100%",
+            text = "100%",
             font_size = 30,
             transform = {
                 position = {
@@ -250,7 +250,7 @@ return {
         {
             name = "Hunger Text",
             type = "Text",
-            text = "Hunger: 100%",
+            text = "100%",
             font_size = 30,
             transform = {
                 position = {

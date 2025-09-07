@@ -83,5 +83,10 @@ function update(self, dt)
         breathe_timer:start()
     end
 
+    if c_is_key_pressed("space") then
+        local clone = self:clone()
+        self:get_root():add_child(clone)
+    end
+
     self:set_transform(transform)
 end
