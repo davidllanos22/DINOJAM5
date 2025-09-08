@@ -1,4 +1,4 @@
-SHOW_SHAPES = false
+SHOW_SHAPES = true
 
 COLORS = {
     BG_FLOOR = { 131, 99, 50, 255 },

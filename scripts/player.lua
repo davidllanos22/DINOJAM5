@@ -73,7 +73,6 @@ function update(self, dt)
     transform.position.x = transform.position.x + accel_x * dt
     transform.position.y = transform.position.y + accel_y * dt
 
-    --transform.position.y= transform.position.y + gravity * dt
     last_position = transform.position
 
     local is_out_of_water = transform.position.y < 0
@@ -81,11 +80,6 @@ function update(self, dt)
     if (is_out_of_water) then
         -- TODO: stop player from moving above water
         breathe_timer:start()
-    end
-
-    if c_is_key_pressed("space") then
-        local clone = self:clone()
-        self:get_root():add_child(clone)
     end
 
     self:set_transform(transform)

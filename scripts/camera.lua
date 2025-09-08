@@ -1,19 +1,29 @@
+local inspect = require("lib.inspect")
+local lume = require("lib.lume")
+
 local player
 
-local offsetX = 20
-local offsetY = 20
+local offsetX = 60
+local offsetY = 50
 
 function init(self)
     player = self:get_root():get_child("Player")
+
+    local player_transform = player:get_transform()
+    local transform = self:get_local_transform()
+
+    transform.position.x = player_transform.position.x + offsetX
+    transform.position.y = player_transform.position.y + offsetY
+    self:set_transform(transform)
+
 end
 
 function update(self, dt)
     local player_transform = player:get_transform()
     local transform = self:get_local_transform()
     
-
-    transform.position.x = transform.position.x + (player_transform.position.x - transform.position.x) * 0.1 + offsetX
-    transform.position.y = transform.position.y + (player_transform.position.y - transform.position.y) * 0.1 + offsetY
-
+    transform.position.x = lume.lerp(transform.position.x, player_transform.position.x, 0.1) - offsetX
+    transform.position.y = lume.lerp(transform.position.y, player_transform.position.y, 0.1) - offsetY
+    
     self:set_transform(transform)
 end

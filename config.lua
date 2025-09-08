@@ -9,6 +9,6 @@ return {
     fullscreen = false,
     vsync = true,
     fps = 60,
-    main_file = "scenes/game.scn",
+    main_file = "test.scn",
     clear_color = COLORS.BG_CLEAR
 }

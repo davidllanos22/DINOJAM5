@@ -32,7 +32,8 @@ return {
             texture = "assets/textures/player.png",
             transform = {
                 scale = 0.5
-            }
+            },
+            origin = { x = 0.5, y = 0.5 }
         },
         {
             name = "Shape",
@@ -44,8 +45,8 @@ return {
             },
             transform = {
                 position = {
-                    x = 23.5,
-                    y = 100
+                    x = -70,
+                    y = 0
                 }
             },
             layer = 1 << 0,
