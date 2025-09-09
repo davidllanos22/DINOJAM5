@@ -4,7 +4,7 @@ return {
 	script_path = "scripts/game.lua",
 	visible = true,
 	transform = {
-		position = { x = -0.968079, y = -0.348083 },
+		position = { x = 0, y = 0 },
 		scale = 1,
 		angle = 0
 	},
@@ -452,7 +452,12 @@ return {
 			type = "Camera2D",
 			script_path = "scripts/camera.lua",
 			visible = true,
-			zoom = 1,
+			transform = {
+				position = { x = 0, y = 0 },
+				scale = 1,
+				angle = 0
+			},
+			zoom = "2.0",
 			children = {
 				{
 					name = "Vignette",
@@ -539,6 +544,7 @@ return {
 		{
 			name = "Breathe Text",
 			type = "Text",
+			font_path = "assets/summer_beach.ttf",
 			visible = true,
 			transform = {
 				position = { x = 5, y = 5 },
@@ -551,6 +557,7 @@ return {
 		{
 			name = "Hunger Text",
 			type = "Text",
+			font_path = "assets/summer_beach.ttf",
 			visible = true,
 			transform = {
 				position = { x = 5, y = 35 },
@@ -571,6 +578,19 @@ return {
 			},
 			shader_path = "assets/shaders/wave-%i.fs",
 			region_enabled = false
+		},
+		{
+			name = "Text",
+			type = "Text",
+			font_path = "assets/summer_beach.ttf",
+			visible = true,
+			transform = {
+				position = { x = 0, y = 0 },
+				scale = 1,
+				angle = 0
+			},
+			text = "TEXT",
+			font_size = 30
 		}
 	}
 }

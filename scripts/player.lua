@@ -61,17 +61,17 @@ function update(self, dt)
         return
     end
 
-    if c_is_key_down("up") then
+    if is_key_down("up") then
         accel_y = accel_y - speed
-    elseif c_is_key_down("down") then
+    elseif is_key_down("down") then
         accel_y = accel_y + speed
     else
         accel_y = accel_y / (1 + damping * dt)
     end
 
-    if c_is_key_down("left") then
+    if is_key_down("left") then
         accel_x = accel_x - speed
-    elseif c_is_key_down("right") then
+    elseif is_key_down("right") then
         accel_x = accel_x + speed
     else
         accel_x = accel_x / (1 + damping * dt)

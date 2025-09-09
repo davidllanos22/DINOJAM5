@@ -1,7 +1,7 @@
 return {
     name = "Squid",
     type = "Area2D",
-    script_path = "scripts/fish_food.lua",
+    script_path = "scripts/squid.lua",
     children = {
         {
             name = "Sprite",
