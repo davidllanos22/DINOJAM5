@@ -21,9 +21,10 @@ end
 function update(self, dt)
     local player_transform = player:get_transform()
     local transform = self:get_local_transform()
+    local zoom = self:get_zoom()
     
-    transform.position.x = lume.lerp(transform.position.x, player_transform.position.x, 0.1) - offsetX
-    transform.position.y = lume.lerp(transform.position.y, player_transform.position.y, 0.1) - offsetY
+    transform.position.x = lume.lerp(transform.position.x, player_transform.position.x, 0.1)
+    transform.position.y = lume.lerp(transform.position.y, player_transform.position.y, 0.1)
     
     self:set_transform(transform)
 end

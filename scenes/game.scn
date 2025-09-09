@@ -227,7 +227,7 @@ return {
             type = "Camera2D",
             target_name = "Player",
             script_path = "scripts/camera.lua",
-            zoom = 1,
+            zoom = 3,
             transform = {
                 position = {
                     x = 0,

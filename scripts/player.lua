@@ -1,5 +1,9 @@
+local Timer = require("lib.timer")
+local inspect = require("lib.inspect")
+
 local breathe_timer
 local hunger_timer
+local camera
 
 local gravity = 1.5
 local speed = 5
@@ -12,7 +16,10 @@ local eat_area
 
 local last_position = { x = 0, y = 0}
 
+local movement_locked = true;
+
 function init(self)
+    camera = self:get_root():get_child("Camera")
     eat_area = self:get_child("Eat Area")
     breathe_timer = self:get_child("Breathe Timer")
     hunger_timer = self:get_child("Hunger Timer")
@@ -30,8 +37,29 @@ function init(self)
 end
 
 function update(self, dt)
+    Timer.update(dt)
     local transform = self:get_local_transform()
     local breathe_percentage = breathe_timer:get_percentage_completed()
+
+    if c_is_key_pressed("x") then
+        Timer.script(function(wait)
+            wait(1)
+            Timer.tween(2, transform.position, {x = transform.position.x, y = transform.position.y - 200 }, "out-cubic", function(value)
+                transform.position = { x = value.x, y = value.y }
+                self:set_transform(transform)
+            end)
+            Timer.tween(2, {zoom = 3}, {zoom = 1}, "linear", function(value)
+                camera:set_zoom(value.zoom)
+            end)
+            wait(2)
+            accel_y = -30
+            movement_locked = false
+        end)
+    end
+
+    if (movement_locked) then
+        return
+    end
 
     if c_is_key_down("up") then
         accel_y = accel_y - speed
