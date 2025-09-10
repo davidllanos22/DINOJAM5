@@ -23,6 +23,10 @@ function init(self)
     eat_area = self:get_child("Eat Area")
     breathe_timer = self:get_child("Breathe Timer")
     hunger_timer = self:get_child("Hunger Timer")
+    local shape = self:get_child("Shape")
+    print(inspect(shape:get_size()))
+
+    shape:set_size({x = 50, y = 50})
 
     eat_area:connect("collision", function(other)
         if c_is_key_pressed("space") then

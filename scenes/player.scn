@@ -38,7 +38,7 @@ return {
         {
             name = "Shape",
             type = "RectangleShape",
-            visible = SHOW_SHAPES,
+            visible = false,
             size = {
                 x = 175,
                 y = 50

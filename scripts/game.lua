@@ -9,6 +9,8 @@ local breathe_text
 local hunger_timer
 local hunger_text
 local text
+local vignette
+local camera
 
 local game_width
 local game_height
@@ -19,6 +21,8 @@ function init(self)
 
     text = self:get_child("Text")
     player = self:get_child("Player")
+    vignette = self:get_child("Vignette")
+    camera = self:get_child("Camera")
 
     breathe_timer = player:get_child("Breathe Timer")
     breathe_text = self:get_child("Breathe Text")
@@ -47,6 +51,8 @@ end
 
 function update(self, dt)
     Timer.update(dt)
+    local camera_position = camera:get_transform().position
+    local vignette_transform = vignette:get_transform()
 
     local breathe_percentage = breathe_timer:get_percentage_completed()
     local hunger_percentage = hunger_timer:get_percentage_completed()
@@ -54,6 +60,10 @@ function update(self, dt)
     -- TODO: lerp between value 0 and 100
     breathe_text:set_text(string.format("%.0f", (1 - breathe_percentage) * 100) .. "%")
     hunger_text:set_text(string.format("%.0f", (1 - hunger_percentage) * 100) .. "%")
+
+    vignette_transform.position.x = camera_position.x - get_game_width() / 2 - 200
+    vignette_transform.position.y = camera_position.y - get_game_height() / 2 + 100
+    vignette:set_transform(vignette_transform)
 end
 
 

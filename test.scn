@@ -10,6 +10,20 @@ return {
 	},
 	children = {
 		{
+			name = "Sea Background Shape",
+			type = "RectangleShape",
+			visible = true,
+			transform = {
+				position = { x = -27, y = 0 },
+				scale = 1,
+				angle = 0
+			},
+			color = { 190, 233, 250, 255 },
+			layer = 1,
+			mask = 1,
+			size = { x = 9000, y = 977 }
+		},
+		{
 			name = "Background",
 			type = "GameObject2D",
 			visible = true,
@@ -211,7 +225,7 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = -742.956, y = -6.9068 },
+						position = { x = -728.33, y = -3.27637 },
 						scale = 1,
 						angle = 0
 					},
@@ -258,57 +272,6 @@ return {
 					frame = 0
 				},
 				{
-					name = "Floor",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = 945.438, y = 471.27 },
-						scale = 1,
-						angle = 180
-					},
-					texture = "assets/textures/bg_white.png",
-					origin = { x = 1, y = 0 },
-					color = { 131, 99, 50, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Floor",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = -941.894, y = 469.47 },
-						scale = 1,
-						angle = 180
-					},
-					texture = "assets/textures/bg_white.png",
-					origin = { x = 1, y = 0 },
-					color = { 131, 99, 50, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Floor",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = 0, y = 470 },
-						scale = 1,
-						angle = 180
-					},
-					texture = "assets/textures/bg_white.png",
-					origin = { x = 1, y = 0 },
-					color = { 131, 99, 50, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
 					name = "Fish Background",
 					type = "Scene",
 					scene_path = "scenes/fish_background.scn",
@@ -318,57 +281,6 @@ return {
 						scale = 1,
 						angle = 0
 					}
-				},
-				{
-					name = "Rocks",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = 769.377, y = 178.361 },
-						scale = 1,
-						angle = 0
-					},
-					texture = "assets/textures/rocks_01.png",
-					origin = { x = 0, y = 0 },
-					color = { 28, 91, 152, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Rocks",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = 137.669, y = 180.505 },
-						scale = 1,
-						angle = 0
-					},
-					texture = "assets/textures/rocks_01.png",
-					origin = { x = 0, y = 0 },
-					color = { 28, 91, 152, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Rocks",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = 447.591, y = 178.058 },
-						scale = 1,
-						angle = 0
-					},
-					texture = "assets/textures/rocks_01.png",
-					origin = { x = 0, y = 0 },
-					color = { 28, 91, 152, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
 				}
 			}
 		},
@@ -378,7 +290,7 @@ return {
 			scene_path = "scenes/player.scn",
 			visible = true,
 			transform = {
-				position = { x = 500, y = 793.028 },
+				position = { x = 500, y = 645 },
 				scale = 1,
 				angle = 0
 			},
@@ -396,11 +308,33 @@ return {
 			}
 		},
 		{
+			name = "Squid",
+			type = "Scene",
+			scene_path = "scenes/squid.scn",
+			visible = true,
+			transform = {
+				position = { x = 729.297, y = 484.43 },
+				scale = 1,
+				angle = 0
+			}
+		},
+		{
+			name = "Squid",
+			type = "Scene",
+			scene_path = "scenes/squid.scn",
+			visible = true,
+			transform = {
+				position = { x = 929.297, y = 484.43 },
+				scale = 1,
+				angle = 0
+			}
+		},
+		{
 			name = "Floor",
 			type = "Body2D",
 			visible = true,
 			transform = {
-				position = { x = 0, y = 843.028 },
+				position = { x = 33.5615, y = 823.366 },
 				scale = 1,
 				angle = 0
 			},
@@ -417,7 +351,7 @@ return {
 					},
 					layer = 2,
 					mask = 1,
-					size = { x = 3200, y = 100 }
+					size = { x = 1807, y = 100 }
 				}
 			}
 		},
@@ -469,7 +403,7 @@ return {
 			type = "Sprite",
 			visible = true,
 			transform = {
-				position = { x = 23, y = 100 },
+				position = { x = 23, y = 99.9395 },
 				scale = 1,
 				angle = -90
 			},
@@ -491,26 +425,7 @@ return {
 				scale = 1,
 				angle = 0
 			},
-			zoom = "2",
-			children = {
-				{
-					name = "Vignette",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = -640, y = -480 },
-						scale = 1.32,
-						angle = 0
-					},
-					texture = "assets/textures/vignette.png",
-					origin = { x = 0, y = 0 },
-					color = { 255, 255, 255, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				}
-			}
+			zoom = "2"
 		},
 		{
 			name = "Foreground",
@@ -572,8 +487,178 @@ return {
 					h_frames = 1,
 					v_frames = 1,
 					frame = 0
+				},
+				{
+					name = "Sea Weed",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 177.774, y = 636.302 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/sea_weed_2.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Sea Weed",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 864.101, y = 647.622 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/sea_weed_2.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Sea Weed",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 1409.33, y = 707.763 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/sea_weed_2.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 8.72861, y = 0 },
+						scale = 1,
+						angle = 84
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 28.6843, y = -200 },
+						scale = 1,
+						angle = 84
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = -993.878, y = 658.983 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = -28.5929, y = 712.32 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 847.283, y = 714.206 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Black",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 1897.07, y = 713.035 },
+						scale = 1,
+						angle = 45
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 0, 0, 0, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
 				}
 			}
+		},
+		{
+			name = "Vignette",
+			type = "Sprite",
+			visible = true,
+			transform = {
+				position = { x = 0, y = 0 },
+				scale = 1.32,
+				angle = 0
+			},
+			texture = "assets/textures/vignette.png",
+			origin = { x = 0, y = 0 },
+			color = { 255, 255, 255, 255 },
+			blend_mode = 0,
+			h_frames = 1,
+			v_frames = 1,
+			frame = 0
 		},
 		{
 			name = "Breathe Text",
@@ -585,7 +670,8 @@ return {
 				angle = 0
 			},
 			text = "100%",
-			font_size = 30
+			font_path = "assets/summery.ttf",
+			font_size = 40
 		},
 		{
 			name = "Hunger Text",
@@ -597,7 +683,8 @@ return {
 				angle = 0
 			},
 			text = "100%",
-			font_size = 30
+			font_path = "assets/summery.ttf",
+			font_size = 40
 		},
 		{
 			name = "Wave Shader",
@@ -621,7 +708,8 @@ return {
 				angle = 0
 			},
 			text = "TEXT",
-			font_size = 30
+			font_path = "assets/summery.ttf",
+			font_size = 40
 		}
 	}
 }
