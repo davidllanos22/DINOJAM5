@@ -16,6 +16,7 @@ local game_width
 local game_height
 
 function init(self)
+    print("timer table", Timer)
     game_width = get_game_width()
     game_height = get_game_height()
 
@@ -68,7 +69,7 @@ end
 
 
 function show_text(text_key)
-    fade_text(1, 0, 255)
+    fade_text(0.5, 0, 255)
     local translated_text = GET_TEXT(text_key)
     local size = text:measure_text_size(translated_text)
     local text_transform = text:get_local_transform()
@@ -82,7 +83,7 @@ function show_text(text_key)
 end
 
 function hide_text()
-    fade_text(1, 255, 0)
+    fade_text(0.5, 255, 0)
 end
 
 function fade_text(duration, start, _end)

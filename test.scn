@@ -10,11 +10,25 @@ return {
 	},
 	children = {
 		{
-			name = "Sea Background Shape",
+			name = "Sea Background",
 			type = "RectangleShape",
 			visible = true,
 			transform = {
 				position = { x = -27, y = 0 },
+				scale = 1,
+				angle = 0
+			},
+			color = { 190, 233, 250, 255 },
+			layer = 1,
+			mask = 1,
+			size = { x = 9000, y = 977 }
+		},
+		{
+			name = "Sky Background",
+			type = "RectangleShape",
+			visible = true,
+			transform = {
+				position = { x = -224.309, y = -977.441 },
 				scale = 1,
 				angle = 0
 			},
@@ -77,23 +91,6 @@ return {
 						angle = 0
 					},
 					texture = "assets/textures/sea_weed_2.png",
-					origin = { x = 0, y = 0 },
-					color = { 28, 91, 152, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Medium",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = -622.37, y = -161.664 },
-						scale = 1,
-						angle = 0
-					},
-					texture = "assets/textures/bg_white.png",
 					origin = { x = 0, y = 0 },
 					color = { 28, 91, 152, 255 },
 					blend_mode = 0,
@@ -208,26 +205,9 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 42.8177, y = -798.007 },
+						position = { x = 144.848, y = -676.661 },
 						scale = 1,
 						angle = 88
-					},
-					texture = "assets/textures/bg_white.png",
-					origin = { x = 0, y = 0 },
-					color = { 25, 66, 107, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Dark",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = -728.33, y = -3.27637 },
-						scale = 1,
-						angle = 0
 					},
 					texture = "assets/textures/bg_white.png",
 					origin = { x = 0, y = 0 },
@@ -325,6 +305,17 @@ return {
 			visible = true,
 			transform = {
 				position = { x = 929.297, y = 484.43 },
+				scale = 1,
+				angle = 0
+			}
+		},
+		{
+			name = "Bubbles",
+			type = "Scene",
+			scene_path = "scenes/bubbles.scn",
+			visible = true,
+			transform = {
+				position = { x = 500, y = 500 },
 				scale = 1,
 				angle = 0
 			}
@@ -544,7 +535,7 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 8.72861, y = 0 },
+						position = { x = 60.6207, y = -130.623 },
 						scale = 1,
 						angle = 84
 					},
@@ -561,26 +552,9 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 28.6843, y = -200 },
+						position = { x = -18.4757, y = 53.8912 },
 						scale = 1,
 						angle = 84
-					},
-					texture = "assets/textures/bg_white.png",
-					origin = { x = 0, y = 0 },
-					color = { 0, 0, 0, 255 },
-					blend_mode = 0,
-					h_frames = 1,
-					v_frames = 1,
-					frame = 0
-				},
-				{
-					name = "Black",
-					type = "Sprite",
-					visible = true,
-					transform = {
-						position = { x = -993.878, y = 658.983 },
-						scale = 1,
-						angle = 0
 					},
 					texture = "assets/textures/bg_white.png",
 					origin = { x = 0, y = 0 },

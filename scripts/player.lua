@@ -19,6 +19,7 @@ local last_position = { x = 0, y = 0}
 local movement_locked = true;
 
 function init(self)
+    print("timer table", Timer)
     camera = self:get_root():get_child("Camera")
     eat_area = self:get_child("Eat Area")
     breathe_timer = self:get_child("Breathe Timer")
@@ -41,22 +42,21 @@ function init(self)
 end
 
 function update(self, dt)
-    Timer.update(dt)
     local transform = self:get_local_transform()
     local breathe_percentage = breathe_timer:get_percentage_completed()
 
     if c_is_key_pressed("x") then
         Timer.script(function(wait)
             Signal.emit("hide_text")
-            wait(1)
-            Timer.tween(2, transform.position, {x = transform.position.x, y = transform.position.y - 200 }, "out-cubic", function(value)
+            wait(0.2)
+            Timer.tween(1, transform.position, {x = transform.position.x, y = transform.position.y - 100 }, "out-cubic", function(value)
                 transform.position = { x = value.x, y = value.y }
                 self:set_transform(transform)
             end)
-            Timer.tween(2, {zoom = 3}, {zoom = 1}, "linear", function(value)
+            Timer.tween(0.8, {zoom = 3}, {zoom = 1}, "out-cubic", function(value)
                 camera:set_zoom(value.zoom)
             end)
-            wait(2)
+            wait(0.5)
             accel_y = -30
             movement_locked = false
             Signal.emit("show_text", "TEXT_01")

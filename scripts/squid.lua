@@ -5,9 +5,10 @@ local shape
 
 function start_down_movement(self)
     local transform = self:get_local_transform()
-    local duration = lume.random(3.5, 4.5)
+    local duration = lume.random(1, 1.5)
+    local amount = math.random(40, 60)
 
-    Timer.tween(duration, transform.position, {x = transform.position.x, y = transform.position.y + 20 }, "linear", function(value)
+    Timer.tween(duration, transform.position, {x = transform.position.x, y = transform.position.y + amount }, "linear", function(value)
         transform.position = { x = value.x, y = value.y }
         self:set_transform(transform)
     end, function()
@@ -43,6 +44,5 @@ function init(self)
 end
 
 function update(self, dt)
-    Timer.update(dt)
 
 end

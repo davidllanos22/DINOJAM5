@@ -1,0 +1,15 @@
+return {
+    name = "Bubble",
+    type = "GameObject2D",
+    script_path = "scripts/bubbles.lua",
+    children = {
+        {
+            name = "Sprite",
+            type = "Sprite",
+            texture = "assets/textures/bubble.png",
+            transform = {
+                scale = 1
+            }
+        },
+    }
+}
