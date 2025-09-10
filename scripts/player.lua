@@ -19,13 +19,11 @@ local last_position = { x = 0, y = 0}
 local movement_locked = true;
 
 function init(self)
-    print("timer table", Timer)
     camera = self:get_root():get_child("Camera")
     eat_area = self:get_child("Eat Area")
     breathe_timer = self:get_child("Breathe Timer")
     hunger_timer = self:get_child("Hunger Timer")
     local shape = self:get_child("Shape")
-    print(inspect(shape:get_size()))
 
     shape:set_size({x = 50, y = 50})
 

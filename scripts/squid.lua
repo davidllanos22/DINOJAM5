@@ -19,11 +19,13 @@ end
 function start_up_movement(self)
     local transform = self:get_local_transform()
     local direction = lume.randomchoice({ 1, -1 })
+    local duration = lume.random(1.5, 2.5)
+    
     local target_position = {
         x = transform.position.x + math.random(60, 70) * direction,
         y = transform.position.y - math.random(50, 60)
     }
-    local duration = lume.random(1.5, 2.5)
+
     Timer.tween(duration, transform.position, target_position, "out-back", function(value)
         transform.position = { x = value.x, y = value.y }
         self:set_transform(transform)

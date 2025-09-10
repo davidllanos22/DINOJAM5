@@ -1,13 +1,15 @@
 local Timer = require("lib.timer")
 local lume  = require("lib.lume")
+
 local speed = 50
 local spawn_time = 0.5
 
-local function spawn_bubble(self)
+local function spawn(self)
     local bubble_sprite = Sprite("Bubble")
     local transform = bubble_sprite:get_local_transform()
     local duration_time = 5
-    transform.position.x = lume.random(-50, 50)
+
+    transform.position.x = lume.random(-30, 30)
     transform.scale = lume.random(0.5, 1)
 
     bubble_sprite:set_texture_path("assets/textures/bubble.png")
@@ -28,7 +30,7 @@ function init(self)
     self:get_child("Sprite"):queue_destroy()
 
     Timer.every(spawn_time, function()
-        spawn_bubble(self)
+        spawn(self)
     end)  
 end
 

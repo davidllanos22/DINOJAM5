@@ -16,7 +16,6 @@ local game_width
 local game_height
 
 function init(self)
-    print("timer table", Timer)
     game_width = get_game_width()
     game_height = get_game_height()
 

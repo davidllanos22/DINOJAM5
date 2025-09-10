@@ -7,29 +7,12 @@ return {
             name = "Sprite",
             type = "Sprite",
             texture = "assets/textures/fish_background.png",
-            color = COLORS.BG_2,
+            color = { 0, 75, 112, 255 },
             origin = {
                 x = 0.5,
                 y = 0.5
             },
             transform = {
-                scale = 0.4
-            }
-        },
-        {
-            name = "Sprite",
-            type = "Sprite",
-            texture = "assets/textures/fish_background.png",
-            color = COLORS.BG_2,
-            origin = {
-                x = 0.5,
-                y = 0.5
-            },
-            transform = {
-                position = {
-                    x = 20,
-                    y = -100
-                },
                 scale = 0.4
             }
         }

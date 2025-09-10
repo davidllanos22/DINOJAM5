@@ -10,5 +10,5 @@ return {
     vsync = true,
     fps = 60,
     main_file = "test.scn",
-    clear_color = COLORS.BG_1
+    clear_color = { 0, 0, 0, 255 }
 }

@@ -133,6 +133,23 @@ return {
 					frame = 0
 				},
 				{
+					name = "Crater",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 472.384, y = -149.887 },
+						scale = 1,
+						angle = 0
+					},
+					texture = "assets/textures/crater.png",
+					origin = { x = 0, y = 0 },
+					color = { 28, 91, 152, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
 					name = "Sea Weed",
 					type = "Sprite",
 					visible = true,
