@@ -7,7 +7,7 @@ return {
             name = "Sprite",
             type = "Sprite",
             texture = "assets/textures/fish_background.png",
-            color = COLORS.BG_MEDIUM,
+            color = COLORS.BG_2,
             origin = {
                 x = 0.5,
                 y = 0.5
@@ -20,7 +20,7 @@ return {
             name = "Sprite",
             type = "Sprite",
             texture = "assets/textures/fish_background.png",
-            color = COLORS.BG_MEDIUM,
+            color = COLORS.BG_2,
             origin = {
                 x = 0.5,
                 y = 0.5

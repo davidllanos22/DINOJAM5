@@ -1,4 +1,6 @@
 local inspect = require("lib.inspect")
+local Timer = require("lib.timer")
+
 local player
 
 local breathe_timer
@@ -24,7 +26,7 @@ function init(self)
     hunger_timer = player:get_child("Hunger Timer")
     hunger_text = self:get_child("Hunger Text")
 
-    show_text(GET_TEXT("PRESS_SPACE"))
+    show_text("PRESS_SPACE")
 
     breathe_timer:connect("finish", function()
         Signal.emit("player_died")
@@ -33,9 +35,19 @@ function init(self)
     hunger_timer:connect("finish", function()
         Signal.emit("player_died")
     end)
+
+    Signal.connect("show_text", function(text_key)
+        show_text(text_key)
+    end)
+
+    Signal.connect("hide_text", function()
+        hide_text()
+    end)
 end
 
 function update(self, dt)
+    Timer.update(dt)
+
     local breathe_percentage = breathe_timer:get_percentage_completed()
     local hunger_percentage = hunger_timer:get_percentage_completed()
 
@@ -45,17 +57,28 @@ function update(self, dt)
 end
 
 
-function show_text(text_string)
-    local size = text:measure_text_size(text_string)
+function show_text(text_key)
+    fade_text(1, 0, 255)
+    local translated_text = GET_TEXT(text_key)
+    local size = text:measure_text_size(translated_text)
     local text_transform = text:get_local_transform()
-
-    print(inspect(size))
-    print(game_width, game_height)
 
     text_transform.position.x = game_width / 2 - size.x / 2
     text_transform.position.y = game_height / 2 - size.y / 2
 
     text:set_transform(text_transform)
 
-    text:set_text(text_string)
+    text:set_text(translated_text)
+end
+
+function hide_text()
+    fade_text(1, 255, 0)
+end
+
+function fade_text(duration, start, _end)
+    local color = text:get_color();
+    Timer.tween(duration, { a = start }, { a = _end }, "linear", function(value)
+        color.a = value.a
+        text:set_color(color)
+    end)
 end

@@ -43,6 +43,7 @@ function update(self, dt)
 
     if c_is_key_pressed("x") then
         Timer.script(function(wait)
+            Signal.emit("hide_text")
             wait(1)
             Timer.tween(2, transform.position, {x = transform.position.x, y = transform.position.y - 200 }, "out-cubic", function(value)
                 transform.position = { x = value.x, y = value.y }
@@ -54,6 +55,9 @@ function update(self, dt)
             wait(2)
             accel_y = -30
             movement_locked = false
+            Signal.emit("show_text", "TEXT_01")
+            wait(10)
+            Signal.emit("hide_text")
         end)
     end
 

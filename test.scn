@@ -126,9 +126,9 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 629.559, y = 36.3724 },
+						position = { x = 620.445, y = 36.0756 },
 						scale = 1,
-						angle = 0
+						angle = -19
 					},
 					texture = "assets/textures/sea_weed_1.png",
 					origin = { x = 0, y = 0 },
@@ -160,9 +160,9 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 10, y = 0 },
+						position = { x = 34.8182, y = -5.78918 },
 						scale = 1,
-						angle = 0
+						angle = -33
 					},
 					texture = "assets/textures/sea_weed_1.png",
 					origin = { x = 0, y = 0 },
@@ -194,6 +194,23 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
+						position = { x = 42.8177, y = -798.007 },
+						scale = 1,
+						angle = 88
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 25, 66, 107, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Dark",
+					type = "Sprite",
+					visible = true,
+					transform = {
 						position = { x = -742.956, y = -6.9068 },
 						scale = 1,
 						angle = 0
@@ -211,9 +228,26 @@ return {
 					type = "Sprite",
 					visible = true,
 					transform = {
-						position = { x = 975.31, y = -10.4378 },
+						position = { x = 977.547, y = -10.7101 },
 						scale = 1,
 						angle = 0
+					},
+					texture = "assets/textures/bg_white.png",
+					origin = { x = 0, y = 0 },
+					color = { 25, 66, 107, 255 },
+					blend_mode = 0,
+					h_frames = 1,
+					v_frames = 1,
+					frame = 0
+				},
+				{
+					name = "Darker",
+					type = "Sprite",
+					visible = true,
+					transform = {
+						position = { x = 2045.61, y = -3.90777 },
+						scale = 1,
+						angle = 45
 					},
 					texture = "assets/textures/bg_white.png",
 					origin = { x = 0, y = 0 },
@@ -344,7 +378,7 @@ return {
 			scene_path = "scenes/player.scn",
 			visible = true,
 			transform = {
-				position = { x = 230.845, y = 710 },
+				position = { x = 500, y = 793.028 },
 				scale = 1,
 				angle = 0
 			},
@@ -366,7 +400,7 @@ return {
 			type = "Body2D",
 			visible = true,
 			transform = {
-				position = { x = 0, y = 860 },
+				position = { x = 0, y = 843.028 },
 				scale = 1,
 				angle = 0
 			},
@@ -383,7 +417,7 @@ return {
 					},
 					layer = 2,
 					mask = 1,
-					size = { x = 6400, y = 100 }
+					size = { x = 3200, y = 100 }
 				}
 			}
 		},
@@ -392,7 +426,7 @@ return {
 			type = "Body2D",
 			visible = true,
 			transform = {
-				position = { x = -100, y = 0 },
+				position = { x = -104.389, y = -154.666 },
 				scale = 1,
 				angle = 0
 			},
@@ -457,7 +491,7 @@ return {
 				scale = 1,
 				angle = 0
 			},
-			zoom = "2.0",
+			zoom = "2",
 			children = {
 				{
 					name = "Vignette",
@@ -494,7 +528,7 @@ return {
 					visible = true,
 					transform = {
 						position = { x = 0, y = 0 },
-						scale = 1,
+						scale = 0.852,
 						angle = 0
 					},
 					texture = "assets/textures/bg_light.png",
@@ -511,7 +545,7 @@ return {
 					visible = true,
 					transform = {
 						position = { x = 1115.84, y = 24.4298 },
-						scale = 1,
+						scale = 0.852,
 						angle = 0
 					},
 					texture = "assets/textures/bg_light.png",
@@ -528,7 +562,7 @@ return {
 					visible = true,
 					transform = {
 						position = { x = 700, y = 0 },
-						scale = 1,
+						scale = 0.852,
 						angle = 0
 					},
 					texture = "assets/textures/bg_light.png",
@@ -544,7 +578,6 @@ return {
 		{
 			name = "Breathe Text",
 			type = "Text",
-			font_path = "assets/summer_beach.ttf",
 			visible = true,
 			transform = {
 				position = { x = 5, y = 5 },
@@ -557,7 +590,6 @@ return {
 		{
 			name = "Hunger Text",
 			type = "Text",
-			font_path = "assets/summer_beach.ttf",
 			visible = true,
 			transform = {
 				position = { x = 5, y = 35 },
@@ -582,7 +614,6 @@ return {
 		{
 			name = "Text",
 			type = "Text",
-			font_path = "assets/summer_beach.ttf",
 			visible = true,
 			transform = {
 				position = { x = 0, y = 0 },
